@@ -1,0 +1,31 @@
+<html>
+<head>ML api</head>
+    <body>
+<h1>loan price prediction</h1>
+<h2>1,0,0,0,0,2,5849,0.0,146,360.0,1.0</h2>
+<h2>Gender	Married	Dependents	Education	Self_Employed	Property_Area	ApplicantIncome	CoapplicantIncome	LoanAmount	Loan_Amount_Term	Credit_History</h2>
+    <div class="login">
+        
+        <form action ="{{ url_for('predict')}}" method="post">
+            <input type="text" name="gender" placeholder="gender" requried="requried"/>
+            <input type="text" name="merried" placeholder="merried" requried="requried"/>
+            <input type="text" name="dependent" placeholder="dependent" requried="requried"/>
+            <input type="text" name="education" placeholder="educated or not " requried="requried"/>
+            <input type="text" name="self_employed" placeholder="self_employed" requried="requried"/>
+            <input type="text" name="property_area" placeholder="property_area" requried="requried"/>
+            <input type="text" name="applicant income" placeholder="applicant income" requried="requried"/>
+            <input type="text" name="coApplicant_income" placeholder="coApplicant_income" requried="requried"/>
+            <input type="text" name="loan_amount" placeholder="loan_amount" requried="requried"/>
+            <input type="text" name="loan_Amount_term" placeholder="loan_Amount_term" requried="requried"/>
+            <input type="text" name="credit_history" placeholder="credit_history" requried="requried"/>
+            
+            <button type="submit",class="btn">Predict</button>
+            
+         </form>
+        <br>
+        <br>
+        {{ prediction_text }}
+    </div>
+        
+    </body>
+</html>
